@@ -54,7 +54,7 @@ function uDPersen(){
             document.getElementById(id[i]).innerHTML =`${(Math.ceil(modal.value * risk[i] / (buy.value - stopLoss.value) / 100  *( buy.value * 100) / modal.value*100))}%` 
             document.getElementById(id[i]).style.background = "red"; 
         }else{
-            document.getElementById(id[i]).innerHTML =`${Math.ceil(modal.value * risk[i] / (buy.value - stopLoss.value) / 100)  *( buy.value * 100) / modal.value*100}%` 
+            document.getElementById(id[i]).innerHTML =`${(Math.ceil(modal.value * risk[i] / (buy.value - stopLoss.value) / 100  *( buy.value * 100) / modal.value*100))}%` 
             document.getElementById(id[i]).style.background = "green";
         }
     }
