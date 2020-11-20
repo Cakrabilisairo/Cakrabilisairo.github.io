@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="Heading">
+        <h1>Money Management Calculator</h1>
+    </div>
+        <div class="inputan form">
+            <label for="modal">Modal:</label>
+            <input type="number" id="modal" name="modal" required>        
+            <label for="Buying price">Buying price:</label>
+            <input type="number" id="Buying price" required>        
+            <label for="Stop Loss">Stop Loss:</label>
+            <input type="number" id="Stop Loss"  required>     
+            <label for="TP 1">Target Profit 1:</label>
+            <input type="number" id="TP 1" required>
+            <label for="TP 2">Target Profit 2:</label>
+            <input type="number" id="TP 2" required>
+            <label for="TP 3">Target Profit 3:</label>
+            <input type="number" id="TP 3" required>
+            <div class="button"> 
+                <button onclick="maksimalLoss(), idealLot(), usageDana(), uDPersen(), lossTaken(), targetProfit1(), targetProfit2(),targetProfit3()">Calculate</button>
+                <a href="index.html"><button>reset</button></a>
+            </div>
+        </div>
+    
+    <table id="result"class="tabel2">
+        <tr>
+          <th rowspan="2">Risk per Trade</th>
+          <th rowspan="2">Maksimal Loss</th>
+          <th rowspan="2">Ideal Lot</th>
+          <th colspan="2">Dana yang Digunakan</th>
+        </tr>
+        <tr>
+            <th>nominal</th>
+            <th>%</th>
+        </tr>
+        <tr>
+          <td>2%</td>
+          <td id="2%"></td>
+          <td id="lot1"></td>
+          <td id="UD1"></td>
+          <td id="UD%1"></td>
+        </tr>
+        <tr>
+          <td>1.5%</td>
+          <td id="1.5%"></td>
+          <td id="lot2"></td>
+          <td id="UD2"></td>
+          <td id="UD%2"></td>
+        </tr>
+        <tr>
+          <td>1%</td>
+          <td id="1%"></td>
+          <td id="lot3"></td>
+          <td id="UD3"></td>
+          <td id="UD%3"></td>
+        </tr>
+      </table>
+      <table id="result"class="tabel2">
+        <tr>
+            <th colspan="5">Proyeksi</th>
+        </tr>
+        <tr>
+          <th>Maksimal Loss</th>
+          <th>Target Profit 1</th>
+          <th>Target Profit 2</th>
+          <th>Target Profit 3</th>
+        </tr>
+        <tr>
+          <td id="ML1"></td>
+          <td id="TP1"></td>
+          <td id="TP11"></td>
+          <td id="TP111"></td>
+        </tr>
+        <tr>
+          <td id="ML2"></td>
+          <td id="TP2"></td>
+          <td id="TP22"></td>
+          <td id="TP222"></td>  
+        </tr>
+        <tr>
+          <td id="ML3"></td>
+          <td id="TP3"></td>
+          <td id="TP33"></td>
+          <td id="TP333"></td>
+        </tr>
+    </table>
+    <p id="header"><strong>Risk Management Rules</strong> </p>
+    <p>1. Selalu tetapkan stop loss</p>
+    <p>2. Penggunaan dana investasi Max 25% - 35% dari total modal</p>
+    <p>3. Target Profit harus lebih besar dari Maksimal Loss</p>
+    <p>4. Max Risk per Trade 2% dari total modal</p>
+    <p id="Risk ratio">5. Max stop loss Risk 10% dari harga beli</p>
+</body>
+</html>
